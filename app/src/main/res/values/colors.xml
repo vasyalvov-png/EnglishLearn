@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme Colors (Vibrant Green & Blue) -->
+    <color name="primary_light">#006D32</color>
+    <color name="onPrimary_light">#FFFFFF</color>
+    <color name="primaryContainer_light">#97F7AC</color>
+    <color name="onPrimaryContainer_light">#00210B</color>
+
+    <color name="secondary_light">#4F6354</color>
+    <color name="onSecondary_light">#FFFFFF</color>
+    <color name="secondaryContainer_light">#D2E8D5</color>
+    <color name="onSecondaryContainer_light">#0C1F13</color>
+
+    <color name="tertiary_light">#3B6470</color>
+    <color name="onTertiary_light">#FFFFFF</color>
+    <color name="tertiaryContainer_light">#BEEAF7</color>
+    <color name="onTertiaryContainer_light">#001F26</color>
+
+    <color name="error_light">#BA1A1A</color>
+    <color name="onError_light">#FFFFFF</color>
+    <color name="errorContainer_light">#FFDAD6</color>
+    <color name="onErrorContainer_light">#410002</color>
+
+    <color name="background_light">#FBFDF8</color>
+    <color name="onBackground_light">#191C19</color>
+    <color name="surface_light">#FBFDF8</color>
+    <color name="onSurface_light">#191C19</color>
+    <color name="outline_light">#717971</color>
+
+    <!-- Dark Theme Colors (Energetic Neon) -->
+    <color name="primary_dark">#7CDA92</color>
+    <color name="onPrimary_dark">#003917</color>
+    <color name="primaryContainer_dark">#005224</color>
+    <color name="onPrimaryContainer_dark">#97F7AC</color>
+
+    <color name="secondary_dark">#B6CCB9</color>
+    <color name="onSecondary_dark">#223528</color>
+    <color name="secondaryContainer_dark">#384B3D</color>
+    <color name="onSecondaryContainer_dark">#D2E8D5</color>
+
+    <color name="tertiary_dark">#A2CDDA</color>
+    <color name="onTertiary_dark">#023640</color>
+    <color name="tertiaryContainer_dark">#214C58</color>
+    <color name="onTertiaryContainer_dark">#BEEAF7</color>
+
+    <color name="error_dark">#FFB4AB</color>
+    <color name="onError_dark">#690005</color>
+    <color name="errorContainer_dark">#93000A</color>
+    <color name="onErrorContainer_dark">#FFDAD6</color>
+
+    <color name="background_dark">#191C19</color>
+    <color name="onBackground_dark">#E1E3DE</color>
+    <color name="surface_dark">#191C19</color>
+    <color name="onSurface_dark">#E1E3DE</color>
+    <color name="outline_dark">#8B938A</color>
+</resources>

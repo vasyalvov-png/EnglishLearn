@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Star -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M54,22L58,33L69,33L60,40L63,51L54,44L45,51L48,40L39,33L50,33Z" />
+    <!-- Book -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M27,58Q40.5,53 54,58Q67.5,53 81,58V82Q67.5,77 54,82Q40.5,77 27,82Z" />
+    <!-- Book Spine -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M53.5,58h1v24h-1z" />
+</vector>

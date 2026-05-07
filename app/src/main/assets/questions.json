@@ -1,0 +1,289 @@
+{
+  "lessons": [
+    {
+      "title": "Основы 1: Приветствия",
+      "description": "Выучите базовые английские приветствия",
+      "difficultyLevel": "Легко",
+      "type": "Intro",
+      "theoryText": "В английском языке приветствия зависят от времени суток.\n• Hello / Hi — универсальные.\n• Good morning — до 12:00.\n• Good afternoon — после 12:00.\n• Good evening — вечером.",
+      "questions": [
+        { "text": "Как переводится 'Hello'?", "type": "MultipleChoice", "options": "Привет|Пока|Спасибо|Пожалуйста", "correctAnswer": "Привет" },
+        { "text": "Переведите: 'Good morning'", "type": "MultipleChoice", "options": "Добрый вечер|Доброе утро|Привет|Как дела", "correctAnswer": "Доброе утро" },
+        { "text": "Вставьте слово: 'I ___ a teacher'", "type": "FillInTheBlank", "options": "am|is|are|be", "correctAnswer": "am" },
+        { "text": "Как сказать 'Добрый вечер'?", "type": "MultipleChoice", "options": "Good evening|Good morning|Good night|Hi", "correctAnswer": "Good evening" },
+        { "text": "Переведите: 'See you later'", "type": "MultipleChoice", "options": "Увидимся позже|Здравствуйте|Удачи|Помогите", "correctAnswer": "Увидимся позже" },
+        { "text": "Как ответить на 'How are you?'", "type": "MultipleChoice", "options": "I am fine|I am teacher|Good night|Nice", "correctAnswer": "I am fine" },
+        { "text": "Вставьте пропуск: 'Hi, how ___ you?'", "type": "FillInTheBlank", "options": "are|is|am|be", "correctAnswer": "are" },
+        { "text": "Как сказать 'До свидания'?", "type": "MultipleChoice", "options": "Goodbye|Please|Welcome|Sorry", "correctAnswer": "Goodbye" },
+        { "text": "Переведите: 'Nice to meet you'", "type": "MultipleChoice", "options": "Приятно познакомиться|Как дела|Добрый день|Пока", "correctAnswer": "Приятно познакомиться" },
+        { "text": "Выберите верное: 'Good ___, sir' (днем)", "type": "WordChoice", "options": "afternoon|morning|night|evening", "correctAnswer": "afternoon" }
+      ]
+    },
+    {
+      "title": "Путешествия",
+      "description": "Английский для аэропорта и отеля",
+      "difficultyLevel": "Средне",
+      "type": "Practical",
+      "theoryText": "В аэропорту вам понадобятся слова: Passport, Ticket, Gate.\nФраза 'Where is...?' поможет найти путь.",
+      "questions": [
+        { "text": "Переведите: 'Where is the airport?'", "type": "MultipleChoice", "options": "Где аэропорт?|Где отель?|Как пройти?|Где выход?", "correctAnswer": "Где аэропорт?" },
+        { "text": "Как сказать 'Билет'?", "type": "MultipleChoice", "options": "Ticket|Hotel|Car|Plane", "correctAnswer": "Ticket" },
+        { "text": "Вставьте пропуск: 'I need ___ passport'", "type": "FillInTheBlank", "options": "my|me|mine|I", "correctAnswer": "my" },
+        { "text": "Что такое 'Gate'?", "type": "MultipleChoice", "options": "Выход на посадку|Вход|Самолет|Чемодан", "correctAnswer": "Выход на посадку" },
+        { "text": "Переведите: 'Is the flight delayed?'", "type": "MultipleChoice", "options": "Рейс задерживается?|Где мой багаж?|Билет платный?|Когда вылет?", "correctAnswer": "Рейс задерживается?" },
+        { "text": "Вставьте слово: 'Where ___ my suitcase?'", "type": "FillInTheBlank", "options": "is|are|am|be", "correctAnswer": "is" },
+        { "text": "Как переводится 'Arrivals'?", "type": "MultipleChoice", "options": "Прибытие|Вылет|Таможня|Справка", "correctAnswer": "Прибытие" },
+        { "text": "Переведите: 'I have a reservation'", "type": "MultipleChoice", "options": "У меня есть бронь|Я хочу заказать|Где отель?|Мне нужен номер", "correctAnswer": "У меня есть бронь" },
+        { "text": "Выберите верное: 'A ___ for two nights'", "type": "WordChoice", "options": "room|car|table|ticket", "correctAnswer": "room" },
+        { "text": "Как сказать 'Посадочный талон'?", "type": "MultipleChoice", "options": "Boarding pass|Credit card|Passport|Map", "correctAnswer": "Boarding pass" }
+      ]
+    },
+    {
+      "title": "В ресторане",
+      "description": "Заказ еды и напитков",
+      "difficultyLevel": "Легко",
+      "type": "Practical",
+      "theoryText": "Используйте 'I would like' для вежливого заказа.\nBill — счет, Menu — меню.",
+      "questions": [
+        { "text": "Переведите: 'Coffee with milk'", "type": "MultipleChoice", "options": "Кофе с молоком|Чай без сахара|Вода|Сок", "correctAnswer": "Кофе с молоком" },
+        { "text": "Как попросить счет?", "type": "MultipleChoice", "options": "The bill, please|Menu, please|Help me|Hello", "correctAnswer": "The bill, please" },
+        { "text": "Вставьте слово: 'I want ___ pizza'", "type": "FillInTheBlank", "options": "a|an|the|some", "correctAnswer": "a" },
+        { "text": "Как переводится 'Water'?", "type": "MultipleChoice", "options": "Вода|Вино|Пиво|Молоко", "correctAnswer": "Вода" },
+        { "text": "Переведите: 'Check, please'", "type": "MultipleChoice", "options": "Счет, пожалуйста|Меню, пожалуйста|Повторите|Тише", "correctAnswer": "Счет, пожалуйста" },
+        { "text": "Как сказать 'Завтрак'?", "type": "MultipleChoice", "options": "Breakfast|Lunch|Dinner|Supper", "correctAnswer": "Breakfast" },
+        { "text": "Выберите верное: 'A table ___ two'", "type": "WordChoice", "options": "for|to|on|at", "correctAnswer": "for" },
+        { "text": "Переведите: 'Is it spicy?'", "type": "MultipleChoice", "options": "Это острое?|Это вкусно?|Это горячее?|Это дорого?", "correctAnswer": "Это острое?" },
+        { "text": "Вставьте слово: 'I would like orange ___'", "type": "FillInTheBlank", "options": "juice|water|tea|milk", "correctAnswer": "juice" },
+        { "text": "Как переводится 'Main course'?", "type": "MultipleChoice", "options": "Основное блюдо|Закуска|Десерт|Напиток", "correctAnswer": "Основное блюдо" }
+      ]
+    },
+    {
+      "title": "Семья",
+      "description": "Члены семьи и родственники",
+      "difficultyLevel": "Легко",
+      "type": "Vocabulary",
+      "theoryText": "Основные члены семьи: Mother (мать), Father (отец), Brother (брат), Sister (сестра).",
+      "questions": [
+        { "text": "Как переводится 'Mother'?", "type": "MultipleChoice", "options": "Мама|Папа|Брат|Сестра", "correctAnswer": "Мама" },
+        { "text": "Как сказать 'Брат'?", "type": "MultipleChoice", "options": "Brother|Sister|Uncle|Aunt", "correctAnswer": "Brother" },
+        { "text": "Вставьте пропуск: 'This is my ___' (сестра)", "type": "FillInTheBlank", "options": "sister|brother|father|mother", "correctAnswer": "sister" },
+        { "text": "Переведите: 'Grandfather'", "type": "MultipleChoice", "options": "Дедушка|Бабушка|Сын|Дочь", "correctAnswer": "Дедушка" },
+        { "text": "Как сказать 'Дочь'?", "type": "MultipleChoice", "options": "Daughter|Son|Children|Parents", "correctAnswer": "Daughter" },
+        { "text": "Вставьте слово: 'I love my ___'", "type": "FillInTheBlank", "options": "family|home|job|school", "correctAnswer": "family" },
+        { "text": "Что значит 'Parents'?", "type": "MultipleChoice", "options": "Родители|Родственники|Друзья|Дети", "correctAnswer": "Родители" },
+        { "text": "Как переводится 'Husband'?", "type": "MultipleChoice", "options": "Муж|Жена|Дядя|Племянник", "correctAnswer": "Муж" },
+        { "text": "Выберите верное: 'He has a ___' (сын)", "type": "WordChoice", "options": "son|daughter|sun|soon", "correctAnswer": "son" },
+        { "text": "Как сказать 'Тетя'?", "type": "MultipleChoice", "options": "Aunt|Uncle|Cousin|Niece", "correctAnswer": "Aunt" }
+      ]
+    },
+    {
+      "title": "Числа и Время",
+      "description": "Счет до 100 и часы",
+      "difficultyLevel": "Средне",
+      "type": "Vocabulary",
+      "theoryText": "Числа: One (1), Ten (10), Fifty (50).\nВремя: 'What time is it?'",
+      "questions": [
+        { "text": "Как будет 'Пять'?", "type": "MultipleChoice", "options": "Five|Four|Six|Seven", "correctAnswer": "Five" },
+        { "text": "Переведите: 'Twenty'", "type": "MultipleChoice", "options": "Двадцать|Двенадцать|Два|Десять", "correctAnswer": "Двадцать" },
+        { "text": "Вставьте пропуск: 'It is five ___'", "type": "FillInTheBlank", "options": "o'clock|hours|time|at", "correctAnswer": "o'clock" },
+        { "text": "Как сказать 'Сто'?", "type": "MultipleChoice", "options": "Hundred|Thousand|Million|Zero", "correctAnswer": "Hundred" },
+        { "text": "Что значит 'Midnight'?", "type": "MultipleChoice", "options": "Полночь|Полдень|Утро|Вечер", "correctAnswer": "Полночь" },
+        { "text": "Вставьте слово: 'I wake up ___ seven'", "type": "FillInTheBlank", "options": "at|on|in|to", "correctAnswer": "at" },
+        { "text": "Как переводится 'Half past six'?", "type": "MultipleChoice", "options": "Половина седьмого|Шесть ровно|Шесть пятнадцать|Семь тридцать", "correctAnswer": "Половина седьмого" },
+        { "text": "Как будет 'Пятнадцать'?", "type": "MultipleChoice", "options": "Fifteen|Fifty|Five|Fifth", "correctAnswer": "Fifteen" },
+        { "text": "Выберите верное: 'Ten ___ ten is twenty'", "type": "WordChoice", "options": "plus|and|with|minus", "correctAnswer": "plus" },
+        { "text": "Как сказать 'Секунда'?", "type": "MultipleChoice", "options": "Second|Minute|Hour|Week", "correctAnswer": "Second" }
+      ]
+    },
+    {
+      "title": "Работа и Профессии",
+      "description": "Кем вы работаете?",
+      "difficultyLevel": "Средне",
+      "type": "Vocabulary",
+      "theoryText": "Названия профессий обычно используются с артиклем 'a/an'.\nПример: I am a doctor.",
+      "questions": [
+        { "text": "Как переводится 'Doctor'?", "type": "MultipleChoice", "options": "Врач|Учитель|Повар|Пилот", "correctAnswer": "Врач" },
+        { "text": "Как сказать 'Учитель'?", "type": "MultipleChoice", "options": "Teacher|Student|Driver|Writer", "correctAnswer": "Teacher" },
+        { "text": "Вставьте пропуск: 'She is ___ artist'", "type": "FillInTheBlank", "options": "an|a|the|some", "correctAnswer": "an" },
+        { "text": "Переведите: 'Engineer'", "type": "MultipleChoice", "options": "Инженер|Рабочий|Механик|Строитель", "correctAnswer": "Инженер" },
+        { "text": "Как переводится 'Waiter'?", "type": "MultipleChoice", "options": "Официант|Повар|Менеджер|Продавец", "correctAnswer": "Официант" },
+        { "text": "Вставьте слово: 'I want to be a ___' (пилот)", "type": "FillInTheBlank", "options": "pilot|plane|driver|doctor", "correctAnswer": "pilot" },
+        { "text": "Что такое 'Office'?", "type": "MultipleChoice", "options": "Офис|Магазин|Школа|Завод", "correctAnswer": "Офис" },
+        { "text": "Как сказать 'Работа'?", "type": "MultipleChoice", "options": "Job|Game|Hobby|Song", "correctAnswer": "Job" },
+        { "text": "Выберите верное: 'What is your ___?'", "type": "WordChoice", "options": "job|work|office|boss", "correctAnswer": "job" },
+        { "text": "Как переводится 'Programmer'?", "type": "MultipleChoice", "options": "Программист|Дизайнер|Аналитик|Тестировщик", "correctAnswer": "Программист" }
+      ]
+    },
+    {
+      "title": "В магазине",
+      "description": "Покупки и одежда",
+      "difficultyLevel": "Средне",
+      "type": "Practical",
+      "theoryText": "Price (цена), Size (размер), Sale (распродажа).\nHow much is it? (Сколько это стоит?)",
+      "questions": [
+        { "text": "Переведите: 'How much is it?'", "type": "MultipleChoice", "options": "Сколько это стоит?|Где магазин?|Какой размер?|Это дорого?", "correctAnswer": "Сколько это стоит?" },
+        { "text": "Как сказать 'Размер'?", "type": "MultipleChoice", "options": "Size|Price|Cost|Sale", "correctAnswer": "Size" },
+        { "text": "Вставьте слово: 'I need a ___' (рубашка)", "type": "FillInTheBlank", "options": "shirt|shoes|hat|dress", "correctAnswer": "shirt" },
+        { "text": "Что такое 'Discount'?", "type": "MultipleChoice", "options": "Скидка|Цена|Касса|Примерочная", "correctAnswer": "Скидка" },
+        { "text": "Переведите: 'Too expensive'", "type": "MultipleChoice", "options": "Слишком дорого|Очень дешево|Хорошая цена|Бесплатно", "correctAnswer": "Слишком дорого" },
+        { "text": "Вставьте слово: 'Can I pay ___ card?'", "type": "FillInTheBlank", "options": "by|with|on|in", "correctAnswer": "by" },
+        { "text": "Как переводится 'Shoes'?", "type": "MultipleChoice", "options": "Обувь|Одежда|Шляпа|Перчатки", "correctAnswer": "Обувь" },
+        { "text": "Как сказать 'Дешево'?", "type": "MultipleChoice", "options": "Cheap|Expensive|Small|Large", "correctAnswer": "Cheap" },
+        { "text": "Выберите верное: 'I like this ___' (платье)", "type": "WordChoice", "options": "dress|shirt|pants|skirt", "correctAnswer": "dress" },
+        { "text": "Что значит 'Fitting room'?", "type": "MultipleChoice", "options": "Примерочная|Склад|Касса|Вход", "correctAnswer": "Примерочная" }
+      ]
+    },
+    {
+      "title": "Хобби и Досуг",
+      "description": "Увлечения и спорт",
+      "difficultyLevel": "Легко",
+      "type": "Vocabulary",
+      "theoryText": "Для хобби используйте: I like reading, I play football.",
+      "questions": [
+        { "text": "Как переводится 'Reading'?", "type": "MultipleChoice", "options": "Чтение|Письмо|Бег|Плавание", "correctAnswer": "Чтение" },
+        { "text": "Как сказать 'Музыка'?", "type": "MultipleChoice", "options": "Music|Game|Sport|Movie", "correctAnswer": "Music" },
+        { "text": "Вставьте пропуск: 'I play ___ guitar'", "type": "FillInTheBlank", "options": "the|a|an|no", "correctAnswer": "the" },
+        { "text": "Переведите: 'Swimming pool'", "type": "MultipleChoice", "options": "Бассейн|Стадион|Парк|Лес", "correctAnswer": "Бассейн" },
+        { "text": "Как будет 'Кино'?", "type": "MultipleChoice", "options": "Cinema|Theatre|Library|Museum", "correctAnswer": "Cinema" },
+        { "text": "Вставьте слово: 'Do you ___ sports?'", "type": "FillInTheBlank", "options": "like|go|do|make", "correctAnswer": "like" },
+        { "text": "Что значит 'Watching TV'?", "type": "MultipleChoice", "options": "Просмотр ТВ|Слушание радио|Игры|Танцы", "correctAnswer": "Просмотр ТВ" },
+        { "text": "Как сказать 'Рисование'?", "type": "MultipleChoice", "options": "Drawing|Singing|Cooking|Driving", "correctAnswer": "Drawing" },
+        { "text": "Выберите верное: 'My hobby is ___' (путешествие)", "type": "WordChoice", "options": "traveling|travelling|travel|traveled", "correctAnswer": "traveling" },
+        { "text": "Как переводится 'Football'?", "type": "MultipleChoice", "options": "Футбол|Баскетбол|Теннис|Гольф", "correctAnswer": "Футбол" }
+      ]
+    },
+    {
+      "title": "Мой дом",
+      "description": "Мебель и комнаты",
+      "difficultyLevel": "Легко",
+      "type": "Vocabulary",
+      "theoryText": "House (дом), Room (комната), Kitchen (кухня), Bedroom (спальня).",
+      "questions": [
+        { "text": "Переведите: 'Kitchen'", "type": "MultipleChoice", "options": "Кухня|Ванная|Зал|Сад", "correctAnswer": "Кухня" },
+        { "text": "Как сказать 'Окно'?", "type": "MultipleChoice", "options": "Window|Door|Wall|Floor", "correctAnswer": "Window" },
+        { "text": "Вставьте предлог: 'The book is ___ the table' (на)", "type": "FillInTheBlank", "options": "on|under|in|at", "correctAnswer": "on" },
+        { "text": "Что такое 'Bed'?", "type": "MultipleChoice", "options": "Кровать|Стул|Шкаф|Зеркало", "correctAnswer": "Кровать" },
+        { "text": "Переведите: 'Living room'", "type": "MultipleChoice", "options": "Гостиная|Кухня|Балкон|Гараж", "correctAnswer": "Гостиная" },
+        { "text": "Вставьте пропуск: 'Open the ___' (дверь)", "type": "FillInTheBlank", "options": "door|window|box|bag", "correctAnswer": "door" },
+        { "text": "Как будет 'Стул'?", "type": "MultipleChoice", "options": "Chair|Table|Lamp|Shelf", "correctAnswer": "Chair" },
+        { "text": "Переведите: 'Bathroom'", "type": "MultipleChoice", "options": "Ванная комната|Туалет|Прихожая|Подвал", "correctAnswer": "Ванная комната" },
+        { "text": "Выберите верное: 'I am ___ home'", "type": "WordChoice", "options": "at|in|on|to", "correctAnswer": "at" },
+        { "text": "Как переводится 'Garden'?", "type": "MultipleChoice", "options": "Сад|Огород|Двор|Улица", "correctAnswer": "Сад" }
+      ]
+    },
+    {
+      "title": "Погода",
+      "description": "Описание погоды и сезоны",
+      "difficultyLevel": "Легко",
+      "type": "Vocabulary",
+      "theoryText": "Для описания погоды используйте 'It is...'. It is sunny (солнечно).",
+      "questions": [
+        { "text": "Как переводится 'Sun'?", "type": "MultipleChoice", "options": "Солнце|Луна|Дождь|Снег", "correctAnswer": "Солнце" },
+        { "text": "Как сказать 'Холодно'?", "type": "MultipleChoice", "options": "Cold|Hot|Warm|Cool", "correctAnswer": "Cold" },
+        { "text": "Вставьте пропуск: 'It is ___ today' (идет дождь)", "type": "FillInTheBlank", "options": "raining|rainy|rain|rains", "correctAnswer": "raining" },
+        { "text": "Переведите: 'Summer'", "type": "MultipleChoice", "options": "Лето|Зима|Осень|Весна", "correctAnswer": "Лето" },
+        { "text": "Как сказать 'Ветрено'?", "type": "MultipleChoice", "options": "Windy|Cloudy|Foggy|Stormy", "correctAnswer": "Windy" },
+        { "text": "Вставьте слово: 'The sky is ___' (голубое)", "type": "FillInTheBlank", "options": "blue|green|red|black", "correctAnswer": "blue" },
+        { "text": "Что значит 'Snow'?", "type": "MultipleChoice", "options": "Снег|Лед|Град|Туман", "correctAnswer": "Снег" },
+        { "text": "Как переводится 'Winter'?", "type": "MultipleChoice", "options": "Зима|Лето|Весна|Осень", "correctAnswer": "Зима" },
+        { "text": "Выберите верное: 'It is very ___' (жарко)", "type": "WordChoice", "options": "hot|cold|warm|cool", "correctAnswer": "hot" },
+        { "text": "Что такое 'Cloud'?", "type": "MultipleChoice", "options": "Облако|Звезда|Радуга|Гроза", "correctAnswer": "Облако" }
+      ]
+    },
+    {
+      "title": "Чувства и Эмоции",
+      "description": "Как вы себя чувствуете?",
+      "difficultyLevel": "Средне",
+      "type": "Vocabulary",
+      "theoryText": "Happy (счастливый), Sad (грустный), Angry (злой), Tired (уставший).",
+      "questions": [
+        { "text": "Как переводится 'Happy'?", "type": "MultipleChoice", "options": "Счастливый|Грустный|Злой|Сонный", "correctAnswer": "Счастливый" },
+        { "text": "Как сказать 'Я устал'?", "type": "MultipleChoice", "options": "I am tired|I am hungry|I am sad|I am good", "correctAnswer": "I am tired" },
+        { "text": "Вставьте слово: 'Why are you ___?' (грустный)", "type": "FillInTheBlank", "options": "sad|happy|tired|angry", "correctAnswer": "sad" },
+        { "text": "Что значит 'Angry'?", "type": "MultipleChoice", "options": "Злой|Добрый|Веселый|Тихий", "correctAnswer": "Злой" },
+        { "text": "Переведите: 'I am hungry'", "type": "MultipleChoice", "options": "Я голоден|Я хочу пить|Я болен|Я занят", "correctAnswer": "Я голоден" },
+        { "text": "Вставьте пропуск: 'She is very ___' (красивая)", "type": "FillInTheBlank", "options": "beautiful|good|nice|bad", "correctAnswer": "beautiful" },
+        { "text": "Как сказать 'Бояться'?", "type": "MultipleChoice", "options": "Afraid|Brave|Funny|Serious", "correctAnswer": "Afraid" },
+        { "text": "Переведите: 'Surprised'", "type": "MultipleChoice", "options": "Удивленный|Спокойный|Активный|Гордый", "correctAnswer": "Удивленный" },
+        { "text": "Выберите верное: 'Are you ___?' (в порядке)", "type": "WordChoice", "options": "okay|good|fine|bad", "correctAnswer": "okay" },
+        { "text": "Как будет 'Сонный'?", "type": "MultipleChoice", "options": "Sleepy|Busy|Late|Early", "correctAnswer": "Sleepy" }
+      ]
+    },
+    {
+      "title": "Город и Транспорт",
+      "description": "На улице и в транспорте",
+      "difficultyLevel": "Средне",
+      "type": "Vocabulary",
+      "theoryText": "Bus (автобус), Car (машина), Street (улица), Stop (остановка).",
+      "questions": [
+        { "text": "Как переводится 'Street'?", "type": "MultipleChoice", "options": "Улица|Дорога|Дом|Мост", "correctAnswer": "Улица" },
+        { "text": "Как сказать 'Автобус'?", "type": "MultipleChoice", "options": "Bus|Train|Bike|Taxi", "correctAnswer": "Bus" },
+        { "text": "Вставьте слово: 'Where is the bus ___?' (остановка)", "type": "FillInTheBlank", "options": "stop|station|park|street", "correctAnswer": "stop" },
+        { "text": "Что такое 'Hospital'?", "type": "MultipleChoice", "options": "Больница|Школа|Аптека|Парк", "correctAnswer": "Больница" },
+        { "text": "Переведите: 'Turn left'", "type": "MultipleChoice", "options": "Поверните налево|Идите прямо|Поверните направо|Стой", "correctAnswer": "Поверните налево" },
+        { "text": "Вставьте пропуск: 'Go ___ ahead'", "type": "FillInTheBlank", "options": "straight|back|left|right", "correctAnswer": "straight" },
+        { "text": "Как сказать 'Библиотека'?", "type": "MultipleChoice", "options": "Library|Bookstore|School|University", "correctAnswer": "Library" },
+        { "text": "Переведите: 'Traffic light'", "type": "MultipleChoice", "options": "Светофор|Перекресток|Машина|Знак", "correctAnswer": "Светофор" },
+        { "text": "Выберите верное: 'I go ___ train'", "type": "WordChoice", "options": "by|on|in|with", "correctAnswer": "by" },
+        { "text": "Что значит 'City center'?", "type": "MultipleChoice", "options": "Центр города|Окраина|Парковка|Площадь", "correctAnswer": "Центр города" }
+      ]
+    },
+    {
+      "title": "Здоровье",
+      "description": "Части тела и болезни",
+      "difficultyLevel": "Средне",
+      "type": "Vocabulary",
+      "theoryText": "Head (голова), Hand (рука), Leg (нога). Фраза: I have a headache.",
+      "questions": [
+        { "text": "Как переводится 'Head'?", "type": "MultipleChoice", "options": "Голова|Рука|Спина|Нога", "correctAnswer": "Голова" },
+        { "text": "Как сказать 'Зубная боль'?", "type": "MultipleChoice", "options": "Toothache|Headache|Cold|Flu", "correctAnswer": "Toothache" },
+        { "text": "Вставьте слово: 'My ___ hurts' (рука)", "type": "FillInTheBlank", "options": "arm|leg|head|back", "correctAnswer": "arm" },
+        { "text": "Что такое 'Doctor'?", "type": "MultipleChoice", "options": "Врач|Медсестра|Пациент|Аптека", "correctAnswer": "Врач" },
+        { "text": "Переведите: 'Take this medicine'", "type": "MultipleChoice", "options": "Примите это лекарство|Идите домой|Пейте воду|Спите", "correctAnswer": "Примите это лекарство" },
+        { "text": "Вставьте пропуск: 'I feel ___' (болен)", "type": "FillInTheBlank", "options": "sick|good|well|happy", "correctAnswer": "sick" },
+        { "text": "Как сказать 'Глаза'?", "type": "MultipleChoice", "options": "Eyes|Ears|Nose|Mouth", "correctAnswer": "Eyes" },
+        { "text": "Переведите: 'I need a dentist'", "type": "MultipleChoice", "options": "Мне нужен стоматолог|Где врач?|У меня болит глаз|Я здоров", "correctAnswer": "Мне нужен стоматолог" },
+        { "text": "Выберите верное: '___ more water'", "type": "WordChoice", "options": "Drink|Eat|Take|Sleep", "correctAnswer": "Drink" },
+        { "text": "Как переводится 'Health'?", "type": "MultipleChoice", "options": "Здоровье|Болезнь|Сила|Жизнь", "correctAnswer": "Здоровье" }
+      ]
+    },
+    {
+      "title": "Грамматика: Глагол To Be",
+      "description": "Основы предложений",
+      "difficultyLevel": "Легко",
+      "type": "Grammar",
+      "theoryText": "Глагол to be: I am, You are, He/She/It is, We are, They are.",
+      "questions": [
+        { "text": "Выберите форму: I ___ a student", "type": "MultipleChoice", "options": "am|is|are|be", "correctAnswer": "am" },
+        { "text": "Выберите форму: They ___ happy", "type": "MultipleChoice", "options": "are|is|am|was", "correctAnswer": "are" },
+        { "text": "Вставьте слово: 'We ___ friends'", "type": "FillInTheBlank", "options": "are|is|am|be", "correctAnswer": "are" },
+        { "text": "Как будет 'Он занят'?", "type": "MultipleChoice", "options": "He is busy|He am busy|He are busy|He be busy", "correctAnswer": "He is busy" },
+        { "text": "Отрицание: I am ___", "type": "MultipleChoice", "options": "not|no|none|never", "correctAnswer": "not" },
+        { "text": "Вставьте пропуск: '___ she your mother?'", "type": "FillInTheBlank", "options": "Is|Are|Am|Do", "correctAnswer": "Is" },
+        { "text": "Вопрос: ___ you ready?", "type": "MultipleChoice", "options": "Are|Is|Am|Do", "correctAnswer": "Are" },
+        { "text": "Переведите: 'It is a cat'", "type": "MultipleChoice", "options": "Это кошка|Это собака|Я кошка|Они кошки", "correctAnswer": "Это кошка" },
+        { "text": "Выберите верное: 'You are ___ alone'", "type": "WordChoice", "options": "not|no|none|never", "correctAnswer": "not" },
+        { "text": "Выберите форму: She ___ at school", "type": "MultipleChoice", "options": "is|am|are|be", "correctAnswer": "is" }
+      ]
+    },
+    {
+      "title": "Кухня и Готовка",
+      "description": "Продукты и посуда",
+      "difficultyLevel": "Средне",
+      "type": "Vocabulary",
+      "theoryText": "Apple (яблоко), Bread (хлеб), Knife (нож), Plate (тарелка).",
+      "questions": [
+        { "text": "Как переводится 'Apple'?", "type": "MultipleChoice", "options": "Яблоко|Груша|Банан|Апельсин", "correctAnswer": "Яблоко" },
+        { "text": "Как сказать 'Хлеб'?", "type": "MultipleChoice", "options": "Bread|Milk|Meat|Rice", "correctAnswer": "Bread" },
+        { "text": "Вставьте слово: 'I eat ___ apple'", "type": "FillInTheBlank", "options": "an|a|the|some", "correctAnswer": "an" },
+        { "text": "Что такое 'Knife'?", "type": "MultipleChoice", "options": "Нож|Вилка|Ложка|Тарелка", "correctAnswer": "Нож" },
+        { "text": "Переведите: 'Salt and pepper'", "type": "MultipleChoice", "options": "Соль и перец|Сахар и чай|Масло и хлеб|Вода и сок", "correctAnswer": "Соль и перец" },
+        { "text": "Вставьте пропуск: 'Put it on the ___' (тарелка)", "type": "FillInTheBlank", "options": "plate|cup|fork|knife", "correctAnswer": "plate" },
+        { "text": "Как сказать 'Мясо'?", "type": "MultipleChoice", "options": "Meat|Fish|Egg|Cheese", "correctAnswer": "Meat" },
+        { "text": "Переведите: 'Cook dinner'", "type": "MultipleChoice", "options": "Готовить ужин|Есть завтрак|Пить чай|Мыть посуду", "correctAnswer": "Готовить ужин" },
+        { "text": "Выберите верное: 'I drink ___ tea' (горячий)", "type": "WordChoice", "options": "hot|cold|warm|ice", "correctAnswer": "hot" },
+        { "text": "Что значит 'Sweet'?", "type": "MultipleChoice", "options": "Сладкий|Горький|Кислый|Соленый", "correctAnswer": "Сладкий" }
+      ]
+    }
+  ]
+}
