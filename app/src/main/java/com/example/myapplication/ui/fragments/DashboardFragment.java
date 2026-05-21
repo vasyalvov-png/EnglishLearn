@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.myapplication.R;
 import com.example.myapplication.data.AppDatabase;
+import com.example.myapplication.data.AppRepository;
 import com.example.myapplication.data.JsonDataLoader;
 import com.example.myapplication.data.entities.Lesson;
 import com.example.myapplication.data.entities.Question;
@@ -98,12 +99,12 @@ public class DashboardFragment extends Fragment {
     }
 
     private void observeData() {
-        AppDatabase db = AppDatabase.getDatabase(requireContext());
-        db.appDao().getAllLessons().observe(getViewLifecycleOwner(), lessons -> {
-            adapter.setLessons(lessons);
+        AppRepository repository = new AppRepository(requireContext());
+        repository.getAllLessons().observe(getViewLifecycleOwner(), lessons -> {
+            adapter.submitList(lessons);
         });
 
-        db.appDao().getUserProgress(1).observe(getViewLifecycleOwner(), progress -> {
+        repository.getUserProgress(1).observe(getViewLifecycleOwner(), progress -> {
             if (progress != null) {
                 binding.textStreakValue.setText(getString(R.string.streak_format, progress.dailyStreak));
                 binding.textXpValue.setText(getString(R.string.xp_format, progress.xp));

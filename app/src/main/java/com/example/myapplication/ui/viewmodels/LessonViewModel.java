@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.myapplication.data.AppDatabase;
+import com.example.myapplication.data.AppRepository;
 import com.example.myapplication.data.entities.DailyActivity;
 import com.example.myapplication.data.entities.Question;
 import com.example.myapplication.data.entities.UserProgress;
@@ -18,7 +19,7 @@ import java.util.concurrent.Executors;
 
 public class LessonViewModel extends AndroidViewModel {
 
-    private final AppDatabase db;
+    private final AppRepository repository;
     private LiveData<List<Question>> questions;
     private final MutableLiveData<Integer> currentQuestionIndex = new MutableLiveData<>(0);
     private final MutableLiveData<Boolean> lessonCompleted = new MutableLiveData<>(false);
@@ -31,14 +32,14 @@ public class LessonViewModel extends AndroidViewModel {
 
     public LessonViewModel(@NonNull Application application) {
         super(application);
-        db = AppDatabase.getDatabase(application);
+        repository = new AppRepository(application);
     }
 
     public void init(int lessonId) {
         if (lessonId == 0) {
-            questions = db.appDao().getRandomQuestions();
+            questions = repository.getRandomQuestions();
         } else {
-            questions = db.appDao().getQuestionsForLesson(lessonId);
+            questions = repository.getQuestionsForLesson(lessonId);
         }
         startTime = System.currentTimeMillis();
         errorCount = 0;
@@ -99,7 +100,7 @@ public class LessonViewModel extends AndroidViewModel {
 
     private void updateUserProgress() {
         Executors.newSingleThreadExecutor().execute(() -> {
-            UserProgress progress = db.appDao().getUserProgressSync(1);
+            UserProgress progress = repository.getDatabase().appDao().getUserProgressSync(1);
             if (progress != null) {
                 progress.xp += 20;
                 
@@ -135,7 +136,7 @@ public class LessonViewModel extends AndroidViewModel {
                 }
                 
                 progress.lastLessonDate = now;
-                db.appDao().updateUserProgress(progress);
+                repository.getDatabase().appDao().updateUserProgress(progress);
                 
                 // Track daily activity
                 Calendar cal = Calendar.getInstance();
@@ -146,12 +147,12 @@ public class LessonViewModel extends AndroidViewModel {
                 cal.set(Calendar.MILLISECOND, 0);
                 long todayStart = cal.getTimeInMillis();
                 
-                DailyActivity activity = db.appDao().getDailyActivitySync(todayStart);
+                DailyActivity activity = repository.getDatabase().appDao().getDailyActivitySync(todayStart);
                 if (activity == null) {
-                    db.appDao().insertDailyActivity(new DailyActivity(todayStart, 20));
+                    repository.getDatabase().appDao().insertDailyActivity(new DailyActivity(todayStart, 20));
                 } else {
                     activity.xpEarned += 20;
-                    db.appDao().insertDailyActivity(activity);
+                    repository.getDatabase().appDao().insertDailyActivity(activity);
                 }
             }
         });

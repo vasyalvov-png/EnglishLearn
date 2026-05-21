@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +9,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
+import androidx.navigation.NavOptions;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import android.widget.Toast;
+
 import com.example.myapplication.R;
-import com.example.myapplication.data.AppDatabase;
+import com.example.myapplication.SandboxActivity;
+import com.example.myapplication.data.AppRepository;
 import com.example.myapplication.data.entities.DailyActivity;
 import com.example.myapplication.databinding.FragmentProfileBinding;
 import com.example.myapplication.ui.adapters.CalendarAdapter;
@@ -41,6 +46,25 @@ public class ProfileFragment extends Fragment {
         
         setupCalendar();
         observeData();
+
+        binding.btnOpenSandbox.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), SandboxActivity.class);
+            startActivity(intent);
+        });
+
+        binding.btnEditProfile.setOnClickListener(v -> 
+            Toast.makeText(getContext(), R.string.edit_profile, Toast.LENGTH_SHORT).show());
+
+        binding.btnAccountSettings.setOnClickListener(v -> 
+            Toast.makeText(getContext(), R.string.account_info, Toast.LENGTH_SHORT).show());
+
+        binding.btnLogout.setOnClickListener(v -> {
+            // Logout logic: Navigate to login and clear all backstack
+            NavOptions navOptions = new NavOptions.Builder()
+                    .setPopUpTo(R.id.nav_graph, true)
+                    .build();
+            Navigation.findNavController(v).navigate(R.id.loginFragment, null, navOptions);
+        });
     }
 
     private void setupCalendar() {
@@ -50,10 +74,10 @@ public class ProfileFragment extends Fragment {
     }
 
     private void observeData() {
-        AppDatabase db = AppDatabase.getDatabase(requireContext());
+        AppRepository repository = new AppRepository(requireContext());
         
         // Observe User Progress
-        db.appDao().getUserProgress(1).observe(getViewLifecycleOwner(), progress -> {
+        repository.getUserProgress(1).observe(getViewLifecycleOwner(), progress -> {
             if (progress != null) {
                 binding.textXpProfile.setText(getString(R.string.xp_format, progress.xp));
                 binding.textStreakProfile.setText(getString(R.string.streak_format, progress.dailyStreak));
@@ -70,9 +94,7 @@ public class ProfileFragment extends Fragment {
         });
 
         // Observe Activity for Calendar
-        db.appDao().getRecentActivity().observe(getViewLifecycleOwner(), activities -> {
-            updateCalendarUI(activities);
-        });
+        repository.getRecentActivity().observe(getViewLifecycleOwner(), this::updateCalendarUI);
     }
 
     private void updateCalendarUI(List<DailyActivity> activities) {

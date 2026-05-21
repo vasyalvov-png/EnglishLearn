@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -36,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
                 .findFragmentById(R.id.nav_host_fragment);
         if (navHostFragment != null) {
             NavController navController = navHostFragment.getNavController();
+            
+            navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+                int id = destination.getId();
+                boolean isAuthDest = id == R.id.loginFragment || id == R.id.registerFragment;
+                
+                if (binding.bottomNav != null) {
+                    binding.bottomNav.setVisibility(isAuthDest ? View.GONE : View.VISIBLE);
+                }
+                if (binding.navigationRail != null) {
+                    binding.navigationRail.setVisibility(isAuthDest ? View.GONE : View.VISIBLE);
+                }
+            });
+
             if (binding.bottomNav != null) {
                 NavigationUI.setupWithNavController(binding.bottomNav, navController);
             } else if (binding.navigationRail != null) {

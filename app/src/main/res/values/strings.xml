@@ -44,4 +44,33 @@
     <string name="rank_master">Мастер английского</string>
     <string name="rank_advanced">Продвинутый ученик</string>
     <string name="rank_beginner">Новичок в английском</string>
+
+    <plurals name="xp_count">
+        <item quantity="one">%d очко опыта</item>
+        <item quantity="few">%d очка опыта</item>
+        <item quantity="many">%d очков опыта</item>
+        <item quantity="other">%d очка опыта</item>
+    </plurals>
+
+    <string name="sandbox_title">Лаборатория</string>
+
+    <string name="notification_channel_name">Обучение</string>
+    <string name="notification_title">Урок пройден!</string>
+    <string name="notification_content">Поздравляем! Вы стали на шаг ближе к цели.</string>
+
+    <string name="login_title">Вход</string>
+    <string name="register_title">Регистрация</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Пароль</string>
+    <string name="name_hint">Имя</string>
+    <string name="login_button">Войти</string>
+    <string name="register_button">Зарегистрироваться</string>
+    <string name="no_account">Нет аккаунта? Зарегистрироваться</string>
+    <string name="has_account">Уже есть аккаунт? Войти</string>
+    <string name="auth_welcome">Добро пожаловать!</string>
+    <string name="auth_subtitle">Изучайте английский весело</string>
+    <string name="label_account">Аккаунт</string>
+    <string name="logout_button">Выйти из аккаунта</string>
+    <string name="edit_profile">Редактировать профиль</string>
+    <string name="account_info">Настройки аккаунта</string>
 </resources>

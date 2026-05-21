@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.myapplication"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -50,6 +50,8 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.gson)
+    implementation(libs.retrofit)
+    implementation(group = "com.squareup.retrofit2", name = "converter-gson", version = "2.11.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

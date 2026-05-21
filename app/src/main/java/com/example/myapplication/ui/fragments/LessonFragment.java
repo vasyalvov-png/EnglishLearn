@@ -1,6 +1,7 @@
 package com.example.myapplication.ui.fragments;
 
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,12 +17,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.myapplication.R;
-import com.example.myapplication.data.AppDatabase;
+import com.example.myapplication.data.AppRepository;
 import com.example.myapplication.data.entities.Lesson;
 import com.example.myapplication.data.entities.Question;
 import com.example.myapplication.databinding.FragmentLessonBinding;
 import com.example.myapplication.ui.adapters.OptionAdapter;
 import com.example.myapplication.ui.viewmodels.LessonViewModel;
+import com.example.myapplication.utils.NotificationHelper;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -31,12 +33,16 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.Executors;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LessonFragment extends Fragment {
 
     private FragmentLessonBinding binding;
     private LessonViewModel viewModel;
     private OptionAdapter adapter;
+    private TextToSpeech tts;
+    private boolean isTtsReady = false;
 
     @Nullable
     @Override
@@ -63,6 +69,7 @@ public class LessonFragment extends Fragment {
 
         setupRecyclerView();
         observeViewModel();
+        initTTS();
 
         binding.toolbarLesson.setNavigationOnClickListener(v -> {
             Navigation.findNavController(requireView()).navigateUp();
@@ -70,6 +77,10 @@ public class LessonFragment extends Fragment {
 
         binding.buttonCheck.setOnClickListener(v -> {
             checkAnswer();
+        });
+
+        binding.buttonSpeak.setOnClickListener(v -> {
+            speakText(binding.textQuestionContent.getText().toString());
         });
 
         binding.buttonClear.setOnClickListener(v -> {
@@ -83,12 +94,50 @@ public class LessonFragment extends Fragment {
         });
     }
 
+    private void initTTS() {
+        tts = new TextToSpeech(requireContext(), status -> {
+            if (status == TextToSpeech.SUCCESS) {
+                int result = tts.setLanguage(Locale.US);
+                if (result != TextToSpeech.LANG_MISSING_DATA && result != TextToSpeech.LANG_NOT_SUPPORTED) {
+                    isTtsReady = true;
+                }
+            }
+        });
+    }
+
+    private void speakText(String text) {
+        if (isTtsReady && tts != null && text != null) {
+            // Пытаемся извлечь английский текст (между одинарными кавычками)
+            Pattern pattern = Pattern.compile("'([^']+)'");
+            Matcher matcher = pattern.matcher(text);
+            String textToSpeak;
+            
+            if (matcher.find()) {
+                textToSpeak = matcher.group(1);
+            } else {
+                // Если кавычек нет, удаляем всю кириллицу
+                textToSpeak = text.replaceAll("[а-яА-ЯёЁ:]", "").trim();
+            }
+
+            if (textToSpeak != null) {
+                // Удаляем нижние подчеркивания, чтобы они не зачитывались
+                textToSpeak = textToSpeak.replace("_", "").trim();
+
+                if (!textToSpeak.isEmpty()) {
+                    tts.speak(textToSpeak, TextToSpeech.QUEUE_FLUSH, null, "UtteranceID");
+                }
+            }
+        }
+    }
+
     private void checkTheory(int lessonId) {
         Executors.newSingleThreadExecutor().execute(() -> {
-            AppDatabase db = AppDatabase.getDatabase(requireContext());
-            Lesson lesson = db.appDao().getLessonByIdSync(lessonId);
+            AppRepository repository = new AppRepository(requireContext());
+            Lesson lesson = repository.getDatabase().appDao().getLessonByIdSync(lessonId);
             if (lesson != null && lesson.theoryText != null && !lesson.theoryText.isEmpty()) {
-                getActivity().runOnUiThread(() -> showTheoryDialog(lesson.theoryText));
+                if (getActivity() != null) {
+                    getActivity().runOnUiThread(() -> showTheoryDialog(lesson.theoryText));
+                }
             }
         });
     }
@@ -222,6 +271,7 @@ public class LessonFragment extends Fragment {
     }
 
     private void showCompletionDialog() {
+        NotificationHelper.showLessonCompleteNotification(requireContext());
         View dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_lesson_result, null);
         
         TextView textXp = dialogView.findViewById(R.id.text_result_xp);
@@ -257,6 +307,10 @@ public class LessonFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
         binding = null;
     }
 }

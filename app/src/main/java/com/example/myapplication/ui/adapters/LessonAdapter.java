@@ -4,18 +4,16 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.data.entities.Lesson;
 import com.example.myapplication.databinding.ItemLessonBinding;
 
-import java.util.ArrayList;
-import java.util.List;
+public class LessonAdapter extends ListAdapter<Lesson, LessonAdapter.LessonViewHolder> {
 
-public class LessonAdapter extends RecyclerView.Adapter<LessonAdapter.LessonViewHolder> {
-
-    private List<Lesson> lessons = new ArrayList<>();
     private final OnLessonClickListener listener;
 
     public interface OnLessonClickListener {
@@ -23,13 +21,23 @@ public class LessonAdapter extends RecyclerView.Adapter<LessonAdapter.LessonView
     }
 
     public LessonAdapter(OnLessonClickListener listener) {
+        super(DIFF_CALLBACK);
         this.listener = listener;
     }
 
-    public void setLessons(List<Lesson> lessons) {
-        this.lessons = lessons;
-        notifyDataSetChanged();
-    }
+    private static final DiffUtil.ItemCallback<Lesson> DIFF_CALLBACK = new DiffUtil.ItemCallback<Lesson>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull Lesson oldItem, @NonNull Lesson newItem) {
+            return oldItem.id == newItem.id;
+        }
+
+        @Override
+        public boolean areContentsTheSame(@NonNull Lesson oldItem, @NonNull Lesson newItem) {
+            return oldItem.title.equals(newItem.title) &&
+                    oldItem.description.equals(newItem.description) &&
+                    oldItem.difficultyLevel.equals(newItem.difficultyLevel);
+        }
+    };
 
     @NonNull
     @Override
@@ -40,13 +48,7 @@ public class LessonAdapter extends RecyclerView.Adapter<LessonAdapter.LessonView
 
     @Override
     public void onBindViewHolder(@NonNull LessonViewHolder holder, int position) {
-        Lesson lesson = lessons.get(position);
-        holder.bind(lesson, listener);
-    }
-
-    @Override
-    public int getItemCount() {
-        return lessons.size();
+        holder.bind(getItem(position), listener);
     }
 
     static class LessonViewHolder extends RecyclerView.ViewHolder {
@@ -62,7 +64,7 @@ public class LessonAdapter extends RecyclerView.Adapter<LessonAdapter.LessonView
             binding.textLessonDesc.setText(lesson.description);
             binding.chipDifficulty.setText(lesson.difficultyLevel);
             
-            // Random progress and status for visual effect
+            // Progress and status for visual effect
             int progress = (lesson.title.length() * 11) % 101;
             binding.progressLesson.setProgress(progress);
             

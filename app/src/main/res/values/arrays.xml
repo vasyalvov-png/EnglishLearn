@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages_array">
+        <item>English</item>
+        <item>Russian</item>
+        <item>Spanish</item>
+        <item>German</item>
+        <item>French</item>
+    </string-array>
+
+    <string-array name="sandbox_list_items">
+        <item>Элемент списка 1</item>
+        <item>Элемент списка 2</item>
+        <item>Элемент списка 3</item>
+        <item>Элемент списка 4</item>
+        <item>Элемент списка 5</item>
+    </string-array>
+</resources>
